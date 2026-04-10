@@ -14,7 +14,7 @@ seed = open("pass.seed", encoding="utf-8").read().strip()
 keyword = input("Ключевое слово: ")
 
 # 3. Получить пароль
-password = hashlib.sha256(f"{seed}::{keyword}".encode()).hexdigest()[:32]
+password = (f"{seed}::{keyword}".encode())
 
 # 4. Вывести
 print(password)
